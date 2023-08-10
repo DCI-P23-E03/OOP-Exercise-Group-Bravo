@@ -1,11 +1,11 @@
 class User:
-    
+
     # first the constructor
-    def __init__(self, username, password, email, new_password):
+    def __init__(self, username, password, email):
         self.username = username
         self.password = password
         self.email = email
-        self.new_password = new_password
+        self.new_password = "keynote1234"
 
     # instance method
     def register_user(self):
@@ -19,8 +19,9 @@ class User:
     def change_password(self):
         print(f"Your old password: {self.password} has been changed to {self.new_password}")
 
-new_password = input("Enter your new password: ")
-user_info = User("john123", "pass123", "john@example.com", new_password)
+
+
+user_info = User("john123", "pass123", "john@example.com")
 user_info.register_user()
 user_info.login_user()
 user_info.change_password()
